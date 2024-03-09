@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html id="html">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="/images/notion.png" type="image/x-icon">
+        <title>Cálculo de Hábitos</title>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <section>
+                <img src="images/notion.png" alt="Logo de Notion" width="100px" height="100px">
+                <h1>Cálculo de Hábitos de Notion</h1>
+            </section>
+        </header>
+        <aside class="barra-lateral">
+            <section>
+                <ul class="lista">
+                    <li>Resultado Hábitos</li>
+                    <li>Bed</li><span></span>
+                    <li>Sleep</li><span></span>
+                    <li>Cold Shower</li><span></span>
+                    <li>Exercise</li><span></span>
+                    <li>Walk</li><span></span>
+                    <li>Develop</li><span></span>
+                    <li>Math</li><span></span>
+                    <li>English</li><span></span>
+                    <li>Reed</li><span></span>
+                    <li>No Fap</li><span></span>
+                    <hr>
+                    <li>Total</li><span></span>
+                    <li>Rendimiento</li><span></span>
+                </ul>
+                <button disabled id="enviar-formulario" type="submit" form="form">Calcular Hábitos</button>
+            </section>
+        </aside>
+        <button class="menu">
+            <ion-icon name="menu-outline" class="open"></ion-icon>
+            <ion-icon name="close-outline" class="close"></ion-icon>
+        </button>
+        <main id="main">
+            <section class="section-1">
+                <div onclick="seleccionarHabitosUno();">
+                    <h2>Seleccionar Hábitos:</h2>
+                    <p>Semana Cold Shower 3 días</p>
+                </div>
+                <div onclick="seleccionarHabitosDos()" class="habitos-2">
+                    <h2>Seleccionar Hábitos:</h2>
+                    <p>Semana Cold Shower 4 días</p>
+                </div>
+            </section>
+        </main>
+        <main class="main-2" hidden>
+            <form id="form">
+                <label class="contenedores" for="bed">
+                    <legend>Bed</legend>
+                    <img src="images/bed.png" alt="Bed" width="100px" height="100px">
+                    <h2>Días cumplidos</h2>
+                    <input id="bed" type="number" required min="0" max="7">
+                </label>
+                <label class="contenedores" for="sleep">
+                    <legend>Sleep</legend>
+                    <img src="images/sleep.png" alt="Sleep" width="100px" height="100px">
+                    <h2>Días cumplidos</h2>
+                    <input id="sleep" type="number" required min="0" max="7">
+                </label>
+                <div id="shower-uno">
+                    <label class="contenedores"  for="cold-shower-1">
+                        <legend>Cold Shower</legend>
+                        <img src="images/coldshower.png" alt="Cold Shower" width="100px" height="100px">
+                        <h2>Días cumplidos</h2>
+                        <input id="cold-shower-1" type="number" min="0" max="3" form="form">
+                    </label>
+                </div>
+                <div id="shower-dos">
+                    <label class="contenedores" for="cold-shower-2">
+                        <legend>Cold Shower</legend>
+                        <img src="images/coldshower.png" alt="Cold Shower" width="100px" height="100px">
+                        <h2>Días cumplidos</h2>
+                        <input id="cold-shower-2" type="number" min="0" max="4" form="form">
+                    </label>
+                </div>
+                <label class="contenedores" for="exercise">
+                    <legend>Exercise</legend>
+                    <img src="images/exercise.png" alt="Exercise" width="100px" height="100px">
+                    <h2>Días cumplidos</h2>
+                    <input id="exercise" type="number" required min="0" max="7">
+                </label>
+                <label class="contenedores" for="walk">
+                    <legend>Walk</legend>
+                    <img class="walk" src="images/walk.png" alt="Walk" width="100px" height="100px">
+                    <h2>Días cumplidos</h2>
+                    <input id="walk" type="number" required min="0" max="5">
+                </label>
+                <label class="contenedores" for="develop">
+                    <legend>Develop</legend>
+                    <img class="develop" src="images/develop.png" alt="Develop" width="100px" height="100px">
+                    <h2>Días cumplidos</h2>
+                    <input id="develop" type="number" required min="0" max="7">
+                </label>
+                <label class="contenedores" for="math">
+                    <legend>Math</legend>
+                    <img src="images/math.png" alt="Math" width="100px" height="100px">
+                    <h2>Días cumplidos</h2>
+                    <input id="math" type="number" required min="0" max="5">
+                </label>
+                <label class="contenedores" for="english">
+                    <legend>English</legend>
+                    <img src="images/english.png" alt="English" width="100px" height="100px">
+                    <h2>Días cumplidos</h2>
+                    <input id="english" type="number" required min="0" max="7">
+                </label>
+                <label class="contenedores" for="reed">
+                    <legend>Reed</legend>
+                    <img src="images/reed.png" alt="Reed" width="100px" height="100px">
+                    <h2>Días cumplidos</h2>
+                    <input id="reed" type="number" required min="0" max="7">
+                </label>
+                <label class="contenedores" for="no-fap">
+                    <legend>No Fap</legend>
+                    <img src="images/nofap.png" alt="No Fap" width="100px" height="100px">
+                    <h2>Días cumplidos</h2>
+                    <input id="no-fap" type="number" required min="0" max="7">
+                </label>
+            </form>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
